@@ -1,8 +1,17 @@
 import React from 'react'
-
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import City from './pages/City'
+import Map from './pages/Map'
 class App extends React.Component {
   render() {
-    return <div className="app">app</div>
+    return (
+      <Router>
+        <Route path="/home" component={Home} />
+        <Route path="/city" component={City} />
+        <Route path="/map" component={Map} />
+      </Router>
+    )
   }
 }
 
